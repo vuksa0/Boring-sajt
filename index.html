@@ -22,6 +22,9 @@
       --dark-grey: #1A1A1A;
       --beige:     #F5F0E8;
       --text-muted:#888888;
+      --bg:         #F7F4EF;
+      --bg-alt:     #EDEAE3;
+      --text:       #1A1A1A;
       --font-heading: 'Raleway', sans-serif;
       --font-body:    'Inter', sans-serif;
     }
@@ -29,8 +32,8 @@
     html { scroll-behavior: smooth; }
 
     body {
-      background: var(--black);
-      color: var(--white);
+      background: var(--bg);
+      color: var(--text);
       font-family: var(--font-body);
       font-weight: 300;
       line-height: 1.7;
@@ -39,7 +42,7 @@
 
     /* ─── SCROLLBAR ─── */
     ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--gold); }
 
     /* ─── UTILS ─── */
@@ -68,7 +71,7 @@
       text-decoration: none;
       padding: 0.9rem 2.4rem;
       border: 1px solid var(--gold);
-      color: var(--white);
+      color: var(--text);
       background: transparent;
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
@@ -246,6 +249,8 @@
       letter-spacing: 0.03em;
     }
     .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .hero-btns .btn { color: var(--white); }
+    .hero-btns .btn:hover { color: var(--black); }
     .hero-scroll {
       display: flex;
       flex-direction: column;
@@ -275,7 +280,7 @@
 
     /* ─── OM OSS ─── */
     #om-oss {
-      background: var(--dark-grey);
+      background: var(--bg-alt);
       padding: 7rem 0;
     }
     .om-grid {
@@ -294,7 +299,7 @@
     }
     .om-text h2 em { font-style: normal; font-weight: 700; color: var(--gold); }
     .om-text p {
-      color: rgba(255,255,255,0.65);
+      color: rgba(26,26,26,0.7);
       font-size: 0.95rem;
       margin-bottom: 1rem;
       line-height: 1.8;
@@ -320,7 +325,7 @@
       font-size: 0.72rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
+      color: rgba(26,26,26,0.6);
       margin-top: 0.3rem;
     }
     .om-visual {
@@ -357,7 +362,7 @@
       font-size: 1.1rem;
       font-weight: 300;
       
-      color: rgba(255,255,255,0.3);
+      color: rgba(26,26,26,0.35);
       text-align: center;
       padding: 0 1rem;
     }
@@ -376,7 +381,7 @@
 
     /* ─── TJENESTER ─── */
     #tjenester {
-      background: var(--black);
+      background: var(--bg);
       padding: 7rem 0;
     }
     .section-header {
@@ -392,7 +397,7 @@
     }
     .section-header h2 em { font-style: normal; font-weight: 700; color: var(--gold); }
     .section-header p {
-      color: rgba(255,255,255,0.55);
+      color: rgba(26,26,26,0.65);
       max-width: 500px;
       margin: 0 auto;
       font-size: 0.92rem;
@@ -405,7 +410,7 @@
       border: 1px solid rgba(160,120,40,0.15);
     }
     .service-card {
-      background: var(--dark-grey);
+      background: var(--bg);
       padding: 2.8rem 2.2rem;
       transition: background 0.3s;
       position: relative;
@@ -422,7 +427,7 @@
       transform-origin: left;
       transition: transform 0.4s;
     }
-    .service-card:hover { background: #1f1f1f; }
+    .service-card:hover { background: var(--bg-alt); }
     .service-card:hover::before { transform: scaleX(1); }
     .service-icon {
       width: 42px;
@@ -438,7 +443,7 @@
     }
     .service-card p {
       font-size: 0.88rem;
-      color: rgba(255,255,255,0.55);
+      color: rgba(26,26,26,0.65);
       line-height: 1.75;
     }
     .service-num {
@@ -454,7 +459,7 @@
 
     /* ─── PROSJEKTER ─── */
     #prosjekter {
-      background: var(--dark-grey);
+      background: var(--bg-alt);
       padding: 7rem 0;
     }
     .portfolio-grid {
@@ -496,7 +501,7 @@
       font-size: 0.65rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.2);
+      color: rgba(26,26,26,0.3);
     }
     .portfolio-overlay {
       position: absolute;
@@ -526,7 +531,7 @@
 
     /* ─── HVORFOR OSS ─── */
     #hvorfor-oss {
-      background: var(--black);
+      background: var(--bg);
       padding: 7rem 0;
     }
     .why-grid {
@@ -538,10 +543,10 @@
     .why-card {
       text-align: center;
       padding: 2.5rem 1.5rem;
-      border: 1px solid rgba(160,120,40,0.12);
+      border: 1px solid rgba(160,120,40,0.25);
       transition: border-color 0.3s;
     }
-    .why-card:hover { border-color: rgba(160,120,40,0.5); }
+    .why-card:hover { border-color: rgba(160,120,40,0.7); }
     .why-icon {
       width: 48px;
       height: 48px;
@@ -556,13 +561,13 @@
     }
     .why-card p {
       font-size: 0.85rem;
-      color: rgba(255,255,255,0.5);
+      color: rgba(26,26,26,0.6);
       line-height: 1.75;
     }
 
     /* ─── PROSESS ─── */
     #prosess {
-      background: var(--dark-grey);
+      background: var(--bg-alt);
       padding: 7rem 0;
     }
     .process-steps {
@@ -598,7 +603,7 @@
       font-size: 1.1rem;
       font-weight: 400;
       color: var(--gold);
-      background: var(--dark-grey);
+      background: var(--bg-alt);
       position: relative;
       z-index: 1;
     }
@@ -610,13 +615,13 @@
     }
     .process-step p {
       font-size: 0.82rem;
-      color: rgba(255,255,255,0.5);
+      color: rgba(26,26,26,0.6);
       line-height: 1.7;
     }
 
     /* ─── KONTAKT ─── */
     #kontakt {
-      background: var(--black);
+      background: var(--bg);
       padding: 7rem 0;
     }
     .kontakt-grid {
@@ -635,7 +640,7 @@
     }
     .kontakt-info h2 em { font-style: normal; font-weight: 700; color: var(--gold); }
     .kontakt-info > p {
-      color: rgba(255,255,255,0.55);
+      color: rgba(26,26,26,0.65);
       font-size: 0.9rem;
       margin-bottom: 2.5rem;
       line-height: 1.8;
@@ -663,11 +668,11 @@
     }
     .kontakt-item-text p {
       font-size: 0.92rem;
-      color: rgba(255,255,255,0.75);
+      color: rgba(26,26,26,0.8);
     }
     .kontakt-item-text a {
       font-size: 0.92rem;
-      color: rgba(255,255,255,0.75);
+      color: rgba(26,26,26,0.8);
       text-decoration: none;
       transition: color 0.3s;
     }
@@ -681,14 +686,14 @@
       font-size: 0.65rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.45);
+      color: rgba(26,26,26,0.55);
     }
     .form-group input,
     .form-group textarea,
     .form-group select {
-      background: var(--dark-grey);
+      background: var(--white);
       border: 1px solid rgba(160,120,40,0.2);
-      color: var(--white);
+      color: var(--text);
       font-family: var(--font-body);
       font-size: 0.9rem;
       font-weight: 300;
@@ -702,8 +707,8 @@
     .form-group textarea:focus,
     .form-group select:focus { border-color: var(--gold); }
     .form-group input::placeholder,
-    .form-group textarea::placeholder { color: rgba(255,255,255,0.2); }
-    .form-group select option { background: var(--dark-grey); }
+    .form-group textarea::placeholder { color: rgba(26,26,26,0.3); }
+    .form-group select option { background: var(--white); }
     .form-submit { margin-top: 0.5rem; }
     .form-submit .btn { width: 100%; text-align: center; }
 
