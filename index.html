@@ -39,15 +39,15 @@
 
     /* ─── SCROLLBAR ─── */
     ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: var(--black); }
-    ::-webkit-scrollbar-thumb { background: var(--gold); }
+    ::-webkit-scrollbar-track { background: var(--white); }
+    ::-webkit-scrollbar-thumb { background: var(--brown); }
 
     /* ─── UTILS ─── */
     .gold-line {
       display: block;
       width: 48px;
       height: 1px;
-      background: var(--gold);
+      background: var(--brown);
       margin: 0 auto 1.5rem;
     }
     .label {
@@ -56,7 +56,7 @@
       font-weight: 500;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--brown-light);
     }
     .btn {
       display: inline-block;
@@ -73,9 +73,9 @@
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
     }
-    .btn:hover { background: var(--gold); color: var(--black); }
-    .btn-filled { background: var(--gold); color: var(--black); }
-    .btn-filled:hover { background: var(--gold-light); color: var(--black); }
+    .btn:hover { background: var(--brown-mid); color: var(--white); }
+    .btn-filled { background: var(--brown); color: var(--white); }
+    .btn-filled:hover { background: var(--brown-mid); color: var(--white); }
 
     section { position: relative; }
     .container { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
@@ -94,7 +94,7 @@
     nav.scrolled {
       background: rgba(10,10,10,0.97);
       padding: 1rem 2rem;
-      border-bottom: 1px solid rgba(160,120,40,0.2);
+      border-bottom: 1px solid rgba(26,8,0,0.2);
     }
     .nav-logo {
       display: flex;
@@ -125,7 +125,7 @@
       font-size: 0.6rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--brown-light);
     }
     .nav-links {
       display: flex;
@@ -142,7 +142,7 @@
       color: rgba(255,255,255,0.7);
       transition: color 0.3s;
     }
-    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover { color: var(--white); }
     .nav-cta { display: flex; align-items: center; }
 
     /* Hamburger */
@@ -170,7 +170,7 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(10,10,10,0.98);
+      background: var(--brown);
       z-index: 99;
       flex-direction: column;
       align-items: center;
@@ -187,7 +187,7 @@
       color: var(--white);
       transition: color 0.3s;
     }
-    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-menu a:hover { color: rgba(26,8,0,0.55); }
 
     /* ─── HERO ─── */
     #hero {
@@ -204,15 +204,15 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 50% at 50% 60%, rgba(160,120,40,0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 50% at 50% 60%, rgba(26,8,0,0.06) 0%, transparent 70%),
         linear-gradient(180deg, transparent 60%, rgba(10,10,10,1) 100%);
     }
     .hero-grid {
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(160,120,40,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(160,120,40,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(26,8,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26,8,0,0.04) 1px, transparent 1px);
       background-size: 80px 80px;
     }
     .hero-content { position: relative; z-index: 1; max-width: 800px; }
@@ -220,7 +220,7 @@
       width: 380px;
       height: auto;
       margin: 0 auto 2rem;
-      filter: drop-shadow(0 0 30px rgba(160,120,40,0.3));
+      filter: drop-shadow(0 0 40px rgba(255,255,255,0.1));
     }
     .hero-label {
       margin-bottom: 1.2rem;
@@ -235,7 +235,7 @@
     }
     .hero-title em { font-style: normal; font-weight: 700;
       
-      color: var(--gold);
+      color: var(--brown-light);
     }
     .hero-sub {
       font-size: 0.95rem;
@@ -246,6 +246,10 @@
       letter-spacing: 0.03em;
     }
     .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .hero-btns .btn { background: transparent; color: var(--white); border-color: rgba(26,8,0,0.5); }
+    .hero-btns .btn:hover { background: var(--white); color: var(--brown); border-color: var(--white); }
+    .hero-btns .btn-filled { background: var(--white); color: var(--brown); border-color: var(--white); }
+    .hero-btns .btn-filled:hover { background: rgba(255,255,255,0.88); }
     .hero-scroll {
       display: flex;
       flex-direction: column;
@@ -270,7 +274,7 @@
     .divider {
       width: 100%;
       height: 1px;
-      background: rgba(160,120,40,0.25);
+      background: rgba(26,8,0,0.1);
     }
 
     /* ─── OM OSS ─── */
@@ -292,9 +296,9 @@
       line-height: 1.2;
       margin-bottom: 1.5rem;
     }
-    .om-text h2 em { font-style: normal; font-weight: 700; color: var(--gold); }
+    .om-text h2 em { font-style: normal; font-weight: 700; color: var(--brown-light); }
     .om-text p {
-      color: rgba(255,255,255,0.65);
+      color: rgba(26,8,0,0.6);
       font-size: 0.95rem;
       margin-bottom: 1rem;
       line-height: 1.8;
@@ -313,14 +317,14 @@
       font-family: var(--font-heading);
       font-size: 2.5rem;
       font-weight: 300;
-      color: var(--gold);
+      color: var(--brown-light);
       line-height: 1;
     }
     .stat-label {
       font-size: 0.72rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
+      color: rgba(26,8,0,0.5);
       margin-top: 0.3rem;
     }
     .om-visual {
@@ -329,7 +333,7 @@
     .om-visual-box {
       aspect-ratio: 4/5;
       background: var(--black);
-      border: 1px solid rgba(160,120,40,0.2);
+      border: 1px solid rgba(26,8,0,0.2);
       position: relative;
       overflow: hidden;
       display: flex;
@@ -339,7 +343,7 @@
     .om-visual-inner {
       width: 80%;
       height: 80%;
-      border: 1px solid rgba(160,120,40,0.15);
+      border: 1px solid rgba(26,8,0,0.15);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -349,7 +353,7 @@
     .om-visual-icon {
       width: 64px;
       height: 64px;
-      color: var(--gold);
+      color: var(--brown-light);
       opacity: 0.5;
     }
     .om-visual-text {
@@ -357,7 +361,7 @@
       font-size: 1.1rem;
       font-weight: 300;
       
-      color: rgba(255,255,255,0.3);
+      color: rgba(26,8,0,0.3);
       text-align: center;
       padding: 0 1rem;
     }
@@ -365,7 +369,7 @@
       position: absolute;
       width: 40px;
       height: 40px;
-      border-color: var(--gold);
+      border-color: var(--brown-light);
       border-style: solid;
       opacity: 0.4;
     }
@@ -390,9 +394,9 @@
       font-weight: 300;
       margin-bottom: 1rem;
     }
-    .section-header h2 em { font-style: normal; font-weight: 700; color: var(--gold); }
+    .section-header h2 em { font-style: normal; font-weight: 700; color: var(--brown-light); }
     .section-header p {
-      color: rgba(255,255,255,0.55);
+      color: rgba(26,8,0,0.55);
       max-width: 500px;
       margin: 0 auto;
       font-size: 0.92rem;
@@ -401,8 +405,8 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
-      background: rgba(160,120,40,0.15);
-      border: 1px solid rgba(160,120,40,0.15);
+      background: rgba(26,8,0,0.15);
+      border: 1px solid rgba(26,8,0,0.15);
     }
     .service-card {
       background: var(--dark-grey);
@@ -417,18 +421,18 @@
       bottom: 0; left: 0;
       width: 100%;
       height: 2px;
-      background: var(--gold);
+      background: var(--brown);
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.4s;
     }
-    .service-card:hover { background: #1f1f1f; }
+    .service-card:hover { background: var(--off-white); }
     .service-card:hover::before { transform: scaleX(1); }
     .service-icon {
       width: 42px;
       height: 42px;
       margin-bottom: 1.5rem;
-      color: var(--gold);
+      color: var(--brown-light);
     }
     .service-card h3 {
       font-family: var(--font-heading);
@@ -438,7 +442,7 @@
     }
     .service-card p {
       font-size: 0.88rem;
-      color: rgba(255,255,255,0.55);
+      color: rgba(26,8,0,0.55);
       line-height: 1.75;
     }
     .service-num {
@@ -448,7 +452,7 @@
       font-family: var(--font-heading);
       font-size: 3rem;
       font-weight: 300;
-      color: rgba(160,120,40,0.08);
+      color: rgba(26,8,0,0.08);
       line-height: 1;
     }
 
@@ -467,7 +471,7 @@
       position: relative;
       overflow: hidden;
       background: var(--black);
-      border: 1px solid rgba(160,120,40,0.1);
+      border: 1px solid rgba(26,8,0,0.1);
       cursor: pointer;
     }
     .portfolio-item:nth-child(1) { grid-column: span 7; }
@@ -482,7 +486,7 @@
       align-items: center;
       justify-content: center;
       gap: 1rem;
-      background: linear-gradient(135deg, var(--black) 0%, #111 100%);
+      background: linear-gradient(135deg, var(--brown) 0%, var(--brown-mid) 100%);
       transition: transform 0.5s;
     }
     .portfolio-item:nth-child(1) .portfolio-placeholder { aspect-ratio: 16/9; }
@@ -490,18 +494,18 @@
     .portfolio-placeholder svg {
       width: 36px;
       height: 36px;
-      color: rgba(160,120,40,0.3);
+      color: rgba(26,8,0,0.3);
     }
     .portfolio-placeholder span {
       font-size: 0.65rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.2);
+      color: rgba(26,8,0,0.25);
     }
     .portfolio-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(10,10,10,0.75);
+      background: rgba(26,8,0,0.82);
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -521,7 +525,7 @@
       font-size: 0.68rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--brown-light);
     }
 
     /* ─── HVORFOR OSS ─── */
@@ -538,15 +542,15 @@
     .why-card {
       text-align: center;
       padding: 2.5rem 1.5rem;
-      border: 1px solid rgba(160,120,40,0.12);
+      border: 1px solid rgba(26,8,0,0.12);
       transition: border-color 0.3s;
     }
-    .why-card:hover { border-color: rgba(160,120,40,0.5); }
+    .why-card:hover { border-color: rgba(26,8,0,0.5); }
     .why-icon {
       width: 48px;
       height: 48px;
       margin: 0 auto 1.5rem;
-      color: var(--gold);
+      color: var(--brown-light);
     }
     .why-card h3 {
       font-family: var(--font-heading);
@@ -556,7 +560,7 @@
     }
     .why-card p {
       font-size: 0.85rem;
-      color: rgba(255,255,255,0.5);
+      color: rgba(26,8,0,0.5);
       line-height: 1.75;
     }
 
@@ -579,7 +583,7 @@
       left: calc(12.5% + 1rem);
       right: calc(12.5% + 1rem);
       height: 1px;
-      background: rgba(160,120,40,0.3);
+      background: rgba(26,8,0,0.3);
     }
     .process-step {
       text-align: center;
@@ -597,7 +601,7 @@
       font-family: var(--font-heading);
       font-size: 1.1rem;
       font-weight: 400;
-      color: var(--gold);
+      color: var(--brown-light);
       background: var(--dark-grey);
       position: relative;
       z-index: 1;
@@ -610,7 +614,7 @@
     }
     .process-step p {
       font-size: 0.82rem;
-      color: rgba(255,255,255,0.5);
+      color: rgba(26,8,0,0.5);
       line-height: 1.7;
     }
 
@@ -633,9 +637,9 @@
       margin-bottom: 1.2rem;
       line-height: 1.2;
     }
-    .kontakt-info h2 em { font-style: normal; font-weight: 700; color: var(--gold); }
+    .kontakt-info h2 em { font-style: normal; font-weight: 700; color: var(--brown-light); }
     .kontakt-info > p {
-      color: rgba(255,255,255,0.55);
+      color: rgba(26,8,0,0.55);
       font-size: 0.9rem;
       margin-bottom: 2.5rem;
       line-height: 1.8;
@@ -649,7 +653,7 @@
     .kontakt-item-icon {
       width: 20px;
       height: 20px;
-      color: var(--gold);
+      color: var(--brown-light);
       flex-shrink: 0;
       margin-top: 2px;
     }
@@ -658,20 +662,20 @@
       font-size: 0.65rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--brown-light);
       margin-bottom: 0.2rem;
     }
     .kontakt-item-text p {
       font-size: 0.92rem;
-      color: rgba(255,255,255,0.75);
+      color: rgba(26,8,0,0.75);
     }
     .kontakt-item-text a {
       font-size: 0.92rem;
-      color: rgba(255,255,255,0.75);
+      color: rgba(26,8,0,0.75);
       text-decoration: none;
       transition: color 0.3s;
     }
-    .kontakt-item-text a:hover { color: var(--gold); }
+    .kontakt-item-text a:hover { color: var(--brown-light); }
 
     /* Form */
     .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
@@ -681,13 +685,13 @@
       font-size: 0.65rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.45);
+      color: rgba(26,8,0,0.45);
     }
     .form-group input,
     .form-group textarea,
     .form-group select {
       background: var(--dark-grey);
-      border: 1px solid rgba(160,120,40,0.2);
+      border: 1px solid rgba(26,8,0,0.2);
       color: var(--white);
       font-family: var(--font-body);
       font-size: 0.9rem;
@@ -700,17 +704,17 @@
     }
     .form-group input:focus,
     .form-group textarea:focus,
-    .form-group select:focus { border-color: var(--gold); }
+    .form-group select:focus { border-color: var(--brown-light); }
     .form-group input::placeholder,
-    .form-group textarea::placeholder { color: rgba(255,255,255,0.2); }
-    .form-group select option { background: var(--dark-grey); }
+    .form-group textarea::placeholder { color: rgba(26,8,0,0.25); }
+    .form-group select option { background: var(--white); }
     .form-submit { margin-top: 0.5rem; }
     .form-submit .btn { width: 100%; text-align: center; }
 
     /* ─── FOOTER ─── */
     footer {
       background: var(--dark-grey);
-      border-top: 1px solid rgba(160,120,40,0.2);
+      border-top: 1px solid rgba(26,8,0,0.2);
       padding: 3rem 0 2rem;
     }
     .footer-inner {
@@ -740,7 +744,7 @@
       font-size: 0.55rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--brown-light);
     }
     .footer-links {
       display: flex;
@@ -755,7 +759,7 @@
       text-decoration: none;
       transition: color 0.3s;
     }
-    .footer-links a:hover { color: var(--gold); }
+    .footer-links a:hover { color: var(--brown-light); }
     .footer-copy {
       font-size: 0.72rem;
       color: rgba(255,255,255,0.25);
@@ -766,7 +770,7 @@
       position: fixed;
       bottom: 2rem;
       right: 2rem;
-      background: var(--gold);
+      background: var(--brown);
       color: var(--black);
       padding: 1rem 1.5rem;
       font-size: 0.82rem;
